@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ROUTES } from "@/const";
+import { ROUTES } from "@/lib/constants";
 
 export const MainHeader = () => {
   return (

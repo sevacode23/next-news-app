@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { DUMMY_NEWS } from "@/const";
+import { DUMMY_NEWS } from "@/lib/constants";
 import { IParamsProps } from "@/types";
 
 export default async function NewsDetailPage(props: IParamsProps<"slug">) {
