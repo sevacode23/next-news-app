@@ -9,3 +9,8 @@ export interface IParamsProps<T extends string> {
 export interface IAllParamsProps<T extends string> {
   params: TAllParams<T>;
 }
+
+export interface IErrorPageProps {
+  error: Error & { digest?: string };
+  reset: () => void;
+}
