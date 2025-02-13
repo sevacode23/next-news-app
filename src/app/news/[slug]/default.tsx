@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { DUMMY_NEWS } from "@/lib/constants";
+import { DUMMY_NEWS, ROUTES } from "@/lib/constants";
 import { IParamsProps } from "@/types";
 
 export default async function NewsDetailPage(props: IParamsProps<"slug">) {
@@ -18,7 +19,11 @@ export default async function NewsDetailPage(props: IParamsProps<"slug">) {
     <article className="news-article">
       <header>
         <h1>{newsItem.title}</h1>
-        <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
+
+        <Link href={`${ROUTES.NEWS}/${newsItem.slug}${ROUTES.IMAGE}`}>
+          <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
+        </Link>
+
         <time dateTime={newsItem.date}>{newsItem.date}</time>
       </header>
 
