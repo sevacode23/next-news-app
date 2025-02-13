@@ -1,6 +1,6 @@
-import { MainHeader } from "./components";
+import "../global.scss";
 
-import "./globals.scss";
+import { MainHeader } from "@/components";
 
 interface IProps {
   children: React.ReactNode;
@@ -11,7 +11,9 @@ export const metadata = {
   description: "Learn how to route to different pages.",
 };
 
-export default function RootLayout({ children }: IProps) {
+export default function ContentLayout(props: IProps) {
+  const { children } = props;
+
   return (
     <html lang="en">
       <body>
